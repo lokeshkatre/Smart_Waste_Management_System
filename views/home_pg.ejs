@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    
+<title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="#" class="nav-branding">SWM System <img class="logo-img" src="/logo.png" > </a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#home" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#header1" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#team" class="nav-link">Team</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contactus" class="nav-link">Contact us</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <iframe id="home"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.2934334572415!2d82.98428677526044!3d25.2607126776702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e33c1e5825b29%3A0xf11b0129c4e17e98!2sLimbdi%20Corner%20IIT%20BHU!5e0!3m2!1sen!2sin!4v1680693717179!5m2!1sen!2sin"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <div class="popup-card">
+        <div class="popup-header">
+            <div class="card-item"> <img class="icon" src="/trash.png" > <h3>Depth : <b id="depth-value"><%=depth%> </b> cm</h3></div>
+          <div class="card-item"> <img class="icon" src="/clock.png" > <h3><b>Time :</b> <%=time%><h3></h3></div>
+         
+        </div>
+        <div class="popup-arrow"><img class="arrow" src="/upward-arrow.png"/></div>
+    </div>
+    
+      <hr>
+    <section id="about" >
+            <div class="content bg-color">
+                <h1 id="header1">Waste Management System Using IoT-Based Machine Learning</h1>
+                <div>
+                    <img src="/homepgimg.jpg">
+                    <p>Along with the development of the Internet of Things (IoT), waste management has
+                        appeared as a serious issue.Waste management is a daily task in urban areas, which requires a
+                        large
+                        amount of
+                        labour resources and affects natural, budgetary, efficiency, and social aspects. Many approaches
+                        have been proposed to
+                        optimize waste management, such as using the nearest neighbour search, colony optimization,
+                        genetic
+                        algorithm, and particle swarm optimization methods. However, the results are still too vague and
+                        cannot be
+                        applied in real systems, such as in universities or cities. Recently, there has been a trend of
+                        combining
+                        optimal waste management strategies with low-cost IoT architectures. In this project, we propose a
+                        novel method that
+                        vigorously and efficiently achieves waste management by predicting the probability of the waste
+                        level in trash bins. By using machine learning the system can optimize the
+                        collection of
+                        waste with the shortest path. 
+                    </p>
+                    
+                </div>
+                <hr>
+                <h1 id="introduction">1.Introduction</h1>
+                <p>The Internet of Things (IoT) is a new and promising technology, which has the potential to
+                    globally change human life in a positive way, thanks to its diverse connectivity. IoT provides
+                    exchange and linkage
+                    between low-energy devices and interactions through the Internet. Many applications around the world
+                    have
+                    been implementing different operations, based on the background of IoT, to offer novel services for
+                    smart
+                    cities and optimize waste system.
+                </p>
+
+                <p>One important application is that IoT technology has become a practical and efficient tool to
+                    build smart cities.A critical issue for a smart city is the increase of waste
+                    generation
+                    with accelerated population growth in cities. Two significant challenges for waste management are
+                    waste
+                    collection and path collection. First, waste collection is a daily task in urban areas entailing the
+                    planning of waste truck routes, in which environmental, economic, and social factors must be
+                    considered. Second, the path length should be shortened, in order to avoid high fuel costs and
+                    reduce the work
+                    amount, by applying graph theory .Some solutions have introduced the use of IoT devices to estimate
+                    the
+                    fill level of inboxes and send this data over the Internet to a server for decision-making .
+                </p>
+                <p>
+                    Machine learning (ML) provides effective solutions, such as regression, classification, clustering,
+                    and correlation rules perception, for IoT-based waste management. There are three main reasons for
+                    this: firstly, in IoT applications, all of the devices are connected, and an immense amount of data
+                    is collected every day. Furthermore, they may be programmed to trigger some events, based either on
+                    some predefined conditions or exciting feedback from the collected data. Secondly, computer systems
+                    can
+                    learn to perform certain tasks, such as classification, clustering, predictions, and pattern
+                    recognition.
+                    Furthermore, these systems are trained using numerous algorithms and statistical models to analyze
+                    sample data. Thirdly, measurable characteristics (called features) usually characterize the sample
+                    data;
+                    some ML algorithms attempt to find correlations between the features and some output values (called
+                    labels).
+                    The information obtained through training is then used to identify patterns or make decisions based
+                    on
+                    new data.
+                </p>
+                <p>
+                    Hence, waste management systems using IoT-based machine learning should consider
+                    more
+                    variables for task prediction.
+                </p>
+                <hr>
+                <h1 id="introduction">2. System Architecture</h1>
+                <div class="flex-img">
+                    <p>The system under consideration consists of smart trash bins with a real-time monitoring system
+                        which integrates multichoices, such as ultrasonic distance sensor HC-SR04, along with a NodeMCU  runs on the ESP8266 Wi-Fi SoC transmission module. Each node is consequently supposed to be powered by multiple sources; for instance, solar energy or
+                        batteries. For flexibility, we have designed hardware that can use either energy source, as
+                        trash bins are often put in places where direct sunlight is not available. Selection of the best
+                        electronic components for their interconnection and for energy efficiency strategies during the
+                        employment of the methods was considered. The proposed system
+                        architecture is shown in Figure 1, where the data collected are sent using Node MCU wifi module to a server,
+                        where they are stored and processed. The data are used to track and predict the status of the
+                        trash over each period. Furthermore, they will be used to calculate the optimal path,
+                        accordingly. The predicted state of each trash bin can be examined, based on assigned training
+                        data. It is, then,
+                        reviewed to refresh the appropriate waste fill level, which is an essential input parameter of
+                        the optimal path algorithm.
+                    </p>
+                    <img class="img1" src="/arch.png" alt="architecture">
+                </div>
+                <hr>    
+                <h1 id="introduction">3.Conclusion</h1>
+                <p>
+                    This system presents many advantages, as compared with the old waste
+                    collection methods. In addition, this study also provides improvements over classical algorithms.
+                    The algorithm is integrated into the system with a low-cost design circuit and enabling its application in practical use-cases, in which changing the sensor components can be done
+                    quickly.This system provides better operations for optimizing employee use, saving operating costs, and collecting data on time.
+                    The system can be built cheaply, simply, and effectively and be extensively applied in cities, universities to unify the filling level of the
+                    trash bins by using an ultrasonic sensor. Again, machine learning will be used, in particular, using
+                    multiclassification methods.
+                </p>
+            </div>
+            <hr>    
+    </section>
+
+
+    <section id="team">
+        <div class="team-content">
+        <h1>Team Members</h1>
+        <ol>
+            <li>Krishna Chaitanya Myneni: 21135071</li>
+            <li>Himanshu Barde: 21135061</li>
+            <li>Harshit Joshi: 21135059</li>
+            <li>Lokesh Kumar Katre : 21135076</li>
+            <li>Ritesh: 21135073</li>
+
+        </ol>
+    </div>
+    </section>
+
+    <footer id="contactus">
+        <div class="row primary">
+            <div class="column about">
+                <h3>Connect</h3>
+                <p>
+                    <i class="fa-solid fa-location-dot" id="location-icon"></i>IIT BHU, Varanasi
+                </p>
+                <div class="social">
+                    <i class="fa fa-facebook-square"></i>
+                    <i class="fa fa-twitter-square"></i>
+                    <i class="fa fa-linkedin-square"></i>
+                    <i class="fa fa-instagram"></i>
+                </div>
+            </div>
+
+            <div class="column link">
+                <h3>Links</h3>
+                <ul>
+                    <li><a class="footer" href="#home">Home</a></li>
+                    <li><a class="footer" href="#about">About</a></li>
+                    <li><a class="footer" href="#team">Team</a></li>
+                    <li><a class="footer" href="#support">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="column subscribe">
+                <div>
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    Register now
+                    <button>Login</button>
+                </div>
+            </div>
+        </div>
+        <div class="row copyright">
+            <div class="footer-menu">
+
+                <a class="footer" href="">Home</a>
+                <a class="footer" href="">F.A.Q</a>
+                <a class="footer" href="">Cookies Policy</a>
+                <a class="footer" href="">Terms Of Service</a>
+                <a class="footer" href="">Support</a>
+
+            </div>
+            <p>Copyright &copy; 2023</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/script.js"></script>
+    <script src="https://kit.fontawesome.com/de21f87916.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
